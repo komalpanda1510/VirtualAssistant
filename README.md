@@ -90,16 +90,89 @@ npm install
 cd client
 npm install
 cd ..
+```
+## Configuration
 
+Create a `.env` file in the root:
 
-
-###Configuration
-
-Create a .env file in the root:
-
+```env
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 GEMINI_API_KEY=your_gemini_api_key
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_key
 CLOUDINARY_API_SECRET=your_cloudinary_secret
+```
+## Running Locally
+
+```bash
+# Backend
+npm run server
+
+# Frontend (in /client)
+npm start
+
+# Or both concurrently if configured
+npm run dev
+```
+Visit http://localhost:3000 to chat with your assistant!
+
+## Deployment
+
+This app is deployable to Render with zero cost:
+
+```bash
+# Push your code to GitHub
+```
+
+
+## Deployment
+
+This app can be deployed on Render for free:
+
+### On Render
+
+#### Backend (Web Service)
+```plaintext
+- Root Directory: e.g., `backend/`
+- Build Command: `npm install` (and `npm run build` if needed)
+- Start Command: `npm run server`
+```
+#### Frontend (Static Site)
+```
+- Root Directory: e.g., frontend/
+- Build Command: npm install && npm run build
+- Publish Directory: build/ (for Create React App)
+```
+
+Then:
+```
+Add environment variables matching your .env file
+
+Click Deploy and your AI assistant will be live!
+```
+### Customization
+```
+Assistant Name — Change display name in UI config.
+
+Voice — Adjust Web Speech API voice settings.
+
+Avatar — Upload your own image via the UI.
+
+Styling — Modify CSS or component styling to suit your brand.
+```
+
+### Contributing
+```
+Fork the repo
+
+Create a feature branch: git checkout -b feature/my-feature
+
+Make your changes and commit: git commit -m "Add awesome feature"
+
+Push to your branch and open a Pull Request
+
+```
+### License
+
+This project is licensed under the MIT License. Feel free to use and customize it for personal or commercial projects.
